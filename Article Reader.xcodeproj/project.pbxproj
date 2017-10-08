@@ -12,6 +12,12 @@
 		040BED6D1F8384EC00E8D5DC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040BED6B1F8384EC00E8D5DC /* Main.storyboard */; };
 		040BED6F1F8384EC00E8D5DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040BED6E1F8384EC00E8D5DC /* Assets.xcassets */; };
 		040BED721F8384EC00E8D5DC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040BED701F8384EC00E8D5DC /* LaunchScreen.storyboard */; };
+		040BED7F1F8397CD00E8D5DC /* RSSXMLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040BED7E1F8397CD00E8D5DC /* RSSXMLParser.swift */; };
+		0485627F1F8522150013E1BB /* ArticleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0485627E1F8522150013E1BB /* ArticleTableViewController.swift */; };
+		048562811F87900C0013E1BB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048562801F87900C0013E1BB /* DetailViewController.swift */; };
+		048562841F87C04B0013E1BB /* Unchecked Checkbox-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 048562831F87C04B0013E1BB /* Unchecked Checkbox-32.png */; };
+		048562861F87C0650013E1BB /* Checked Checkbox-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 048562851F87C0650013E1BB /* Checked Checkbox-32.png */; };
+		0490E2A71F8509B00031737C /* RSSReaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0490E2A61F8509B00031737C /* RSSReaderCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		040BED6E1F8384EC00E8D5DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		040BED711F8384EC00E8D5DC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		040BED731F8384EC00E8D5DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		040BED7E1F8397CD00E8D5DC /* RSSXMLParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSXMLParser.swift; sourceTree = "<group>"; };
+		0485627E1F8522150013E1BB /* ArticleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleTableViewController.swift; sourceTree = "<group>"; };
+		048562801F87900C0013E1BB /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		048562831F87C04B0013E1BB /* Unchecked Checkbox-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Unchecked Checkbox-32.png"; sourceTree = "<group>"; };
+		048562851F87C0650013E1BB /* Checked Checkbox-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checked Checkbox-32.png"; sourceTree = "<group>"; };
+		0490E2A61F8509B00031737C /* RSSReaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RSSReaderCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +50,7 @@
 		040BED5B1F8384EB00E8D5DC = {
 			isa = PBXGroup;
 			children = (
+				040BED7B1F83867200E8D5DC /* RSS Parser */,
 				040BED661F8384EC00E8D5DC /* Article Reader */,
 				040BED651F8384EC00E8D5DC /* Products */,
 			);
@@ -56,12 +69,25 @@
 			children = (
 				040BED671F8384EC00E8D5DC /* AppDelegate.swift */,
 				040BED691F8384EC00E8D5DC /* ViewController.swift */,
+				0490E2A61F8509B00031737C /* RSSReaderCell.swift */,
+				0485627E1F8522150013E1BB /* ArticleTableViewController.swift */,
+				048562801F87900C0013E1BB /* DetailViewController.swift */,
 				040BED6B1F8384EC00E8D5DC /* Main.storyboard */,
 				040BED6E1F8384EC00E8D5DC /* Assets.xcassets */,
+				048562851F87C0650013E1BB /* Checked Checkbox-32.png */,
+				048562831F87C04B0013E1BB /* Unchecked Checkbox-32.png */,
 				040BED701F8384EC00E8D5DC /* LaunchScreen.storyboard */,
 				040BED731F8384EC00E8D5DC /* Info.plist */,
 			);
 			path = "Article Reader";
+			sourceTree = "<group>";
+		};
+		040BED7B1F83867200E8D5DC /* RSS Parser */ = {
+			isa = PBXGroup;
+			children = (
+				040BED7E1F8397CD00E8D5DC /* RSSXMLParser.swift */,
+			);
+			name = "RSS Parser";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -124,9 +150,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				048562861F87C0650013E1BB /* Checked Checkbox-32.png in Resources */,
 				040BED721F8384EC00E8D5DC /* LaunchScreen.storyboard in Resources */,
 				040BED6F1F8384EC00E8D5DC /* Assets.xcassets in Resources */,
 				040BED6D1F8384EC00E8D5DC /* Main.storyboard in Resources */,
+				048562841F87C04B0013E1BB /* Unchecked Checkbox-32.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,8 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0485627F1F8522150013E1BB /* ArticleTableViewController.swift in Sources */,
 				040BED6A1F8384EC00E8D5DC /* ViewController.swift in Sources */,
 				040BED681F8384EC00E8D5DC /* AppDelegate.swift in Sources */,
+				048562811F87900C0013E1BB /* DetailViewController.swift in Sources */,
+				0490E2A71F8509B00031737C /* RSSReaderCell.swift in Sources */,
+				040BED7F1F8397CD00E8D5DC /* RSSXMLParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +336,7 @@
 				040BED781F8384EC00E8D5DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
